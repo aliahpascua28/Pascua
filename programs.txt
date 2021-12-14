@@ -1,0 +1,189 @@
+
+
+
+
+
+
+
+
+
+
+
+
+public void hellometh()
+        {
+            Console.WriteLine("Philippines, Hello World!");
+            Console.WriteLine("My name is Michael Smith!");
+            Console.WriteLine("I am 19 years old, from Manila.");
+
+            Console.WriteLine();
+        }
+
+        public void namemeth()
+        {
+
+            string n1;
+            string inp;
+
+            Console.WriteLine("Enter first name:");
+            inp = Console.ReadLine();
+            n1 = Convert.ToString(inp);
+
+            Console.WriteLine("Your name is " + n1);
+
+            Console.WriteLine();
+        }
+
+        public void summeth()
+        {
+
+            string input;
+            int n1, n2, sum;
+
+            Console.WriteLine("Enter first number:");
+            input = Console.ReadLine();
+            n1 = Convert.ToInt32(input);
+
+            Console.WriteLine("Enter second number:");
+            input = Console.ReadLine();
+            n2 = Convert.ToInt32(input);
+
+            sum = n1 + n2;
+
+            Console.WriteLine("The sum of the two numbers is " + sum);
+
+            Console.WriteLine();
+        }
+    }
+
+    public class inputandoutput
+    {
+        public void twonumbersoperatorsmeth()
+        {
+            double n1, n2, ans;
+
+            Console.WriteLine("Enter first number:");
+            n1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter second number:");
+            n2 = Convert.ToInt32(Console.ReadLine());
+
+            ans = n1 + n2;
+            Console.WriteLine("The sum of " + n1 + " and " + n2 + " is " + ans);
+
+            ans = n1 - n2;
+            Console.WriteLine("The difference of " + n1 + " and " + n2 + " is " + ans);
+
+            ans = n1 * n2;
+            Console.WriteLine("The product of " + n1 + " and " + n2 + " is " + ans);
+
+            ans = n1 / n2;
+            Console.WriteLine("The quotient of " + n1 + " and " + n2 + " is " + ans);
+
+            ans = n1 % n2;
+            Console.WriteLine("The remainder of " + n1 + " and " + n2 + " is " + ans);
+
+            Console.WriteLine();
+
+
+        }
+
+        public void semestralgrademeth()
+        {
+            double prelim, midterm, final, semgrade;
+
+            Console.WriteLine("Enter your Prelim Grade:");
+            prelim = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter your Midterm Grade:");
+            midterm = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter your Final Grade:");
+            final = Convert.ToDouble(Console.ReadLine());
+
+            semgrade = (0.3 * prelim) + (0.3 * midterm) + (0.4 * final);
+
+            Console.WriteLine("Your Semestral Grade is " + semgrade);
+
+            Console.WriteLine();
+        }
+
+
+        class MainClass
+        {
+            public static void Main(string[] args)
+            {
+                int choice;
+                char opt;
+
+            start:
+                Console.Clear();
+
+                Console.WriteLine("Compilation of C# Programs in FOP");
+                Console.WriteLine("Compiled by:");
+                Console.WriteLine("Aliah Pascua");
+                Console.WriteLine("IT103");
+                Console.WriteLine("1st Semester SY 2021-2022");
+                Console.WriteLine();
+                Console.WriteLine("Presented to:");
+                Console.WriteLine("Sir Leonard Alejandro");
+                Console.WriteLine();
+
+                Console.WriteLine("Choose from:");
+                Console.WriteLine("1 - Hello Program");
+                Console.WriteLine("2 - Name Program");
+                Console.WriteLine("3 - Sum Program");
+                Console.WriteLine("4 - Adding, Subtracting, Multiplying, and Dividing 2 numbers Program");
+                Console.WriteLine("5 - Semestral Grade Program");
+
+                Console.WriteLine();
+
+                Console.WriteLine("Enter your choice:");
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine();
+
+                switch (choice)
+                {
+                    case 1:
+                        introduction a = new introduction();
+                        a.hellometh();
+                        break;
+
+                    case 2:
+                        introduction b = new introduction();
+                        b.namemeth();
+                        break;
+
+                    case 3:
+                        introduction c = new introduction();
+                        c.summeth();
+                        break;
+
+                    case 4:
+                        inputandoutput d = new inputandoutput();
+                        d.twonumbersoperatorsmeth();
+                        break;
+
+                    case 5:
+                        inputandoutput e = new inputandoutput();
+                        e.semestralgrademeth();
+                        break;
+
+
+                }
+
+                Console.WriteLine();
+
+
+                Console.WriteLine("Do you want to go back to the main menu?[Y/N]");
+                opt = Convert.ToChar(Console.ReadLine());
+
+                if (opt == 'Y' || opt == 'y')
+                {
+                    goto start;
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
